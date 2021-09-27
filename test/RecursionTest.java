@@ -13,13 +13,21 @@ public class RecursionTest {
 	}
 	
 	@Test
-	public void testMultiply() {
+	public void testMultiplyPositive() {
 		assertEquals(1,Recursion.multiply(1,1));
+		assertEquals(21,Recursion.multiply(7,3));
+	}
+	
+	@Test
+	public void testMultiplyOneNegative() {
 		assertEquals(-1,Recursion.multiply(-1,1));
 		assertEquals(-1,Recursion.multiply(1,-1));
-		assertEquals(21,Recursion.multiply(7,3));
 		assertEquals(-21,Recursion.multiply(7,-3));
 		assertEquals(-21,Recursion.multiply(-7,3));
+	}
+	
+	@Test
+	public void testMultiplyBothNegative() {
 		assertEquals(21,Recursion.multiply(-7,-3));
 	}
 	
