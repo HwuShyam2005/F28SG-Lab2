@@ -19,7 +19,7 @@ public class Tail {
 	
 	// optional part
 	private static int tailSum(int n,int sum){
-		return -1; // dummy value to be removed.
+		return -1; // TODO dummy value to be removed.
 	}
 		
 	
@@ -29,7 +29,7 @@ public class Tail {
 	
 	// optional part
 	private static int tailMultiply(int m,int n,int sum){
-		return -1; // dummy value to be removed.
+		return -1; // TODO dummy value to be removed.
 	}
 
 }
