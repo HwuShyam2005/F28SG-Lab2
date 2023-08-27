@@ -4,7 +4,7 @@ class StackException extends RuntimeException{
 	}
 }
 
-public class Stack implements Cloneable {
+public class Stack implements StackADT, Cloneable {
 	private Object[] S;
 	private int top;
 	private int capacity;
