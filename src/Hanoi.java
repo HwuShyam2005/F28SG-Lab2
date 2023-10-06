@@ -41,7 +41,8 @@ public class Hanoi {
 	 * @param to   the tower to put the ring onto the top of
 	 */
 	public void moveOneRing(int from, int to) {
-		/* TODO */
+		//POPPING OF DISK FROM THE PEG 'FROM' AND PUSING ONTO THE PEG 'TO'
+		towers[to].push(towers[from].pop());
 
 		/*
 		 * Checks the invariant that a ring can only be placed on a larger ring. Leave
@@ -83,7 +84,17 @@ public class Hanoi {
 	 * @param via  the index of the tower which intermediate rings will be moved to
 	 */
 	public void movePile(int n, int from, int to, int via) {
-		/* TODO */
+		//IF ONLY ONE DISK IS THERE TO REMOVE, THEN MOVE IT DIRECTLY FROM 'FROM' TO 'TO'
+		if(n==1) {
+			moveOneRing(from,to);
+		}
+			else {
+			movePile(n-1,from,via,to);
+		//MOVE LARGEST DISK N DISK FROM 'FROM' TO 'TO'
+			moveOneRing(from,to);
+		//MOVE THE (N-1) DISKS FROM 'VIA' TO 'TO', USING 'FROM'
+			movePile(n-1,via,to,from);
+			}
 	}
 
 	/**
